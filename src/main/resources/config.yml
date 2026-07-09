@@ -1,0 +1,136 @@
+luck:
+  enabled: true
+  balance-step: 40
+  balance-min: -1200
+  balance-max: 1200
+  common-gain-divisor: 4
+  rare-gain-divisor: 3
+  epic-gain-divisor: 4
+  low-tier-boost-per-step: 1
+  epic-boost-per-step: 1
+  high-tier-boost-per-step: 1
+  legendary-boost-per-step: 2
+  rare-penalty-per-step: 1
+  epic-penalty-per-step: 1
+  mythical-penalty-per-step: 1
+  legendary-penalty-per-step: 2
+  rare-bonus-cap: 500
+  rare-bonus-decay-per-roll: 3
+  rare-bonus-consume-on-rare: 20
+  rare-bonus-spend-on-mythical: 55
+  rare-bonus-spend-on-legendary: 95
+  tier-debt-decay-per-roll: 4
+  tier-debt-gain-on-rare: 1
+  tier-debt-gain-on-epic: 1
+  tier-debt-gain-on-mythical: 18
+  tier-debt-gain-on-legendary: 30
+  mythical-rare-bonus-gain: 28
+  legendary-rare-bonus-multiplier: 3
+  legendary-rare-bonus-gain: 12
+case:
+  name: '&6&lLexCase'
+  center-hologram-height: 1.00
+  open-hologram-height: 1.00
+  item-rise-height: 0.00
+  chest-close-delay-ticks: 35
+  chest-remove-step-ticks: 5
+  chest-spawn-step-ticks: 5
+  auto-open-step-ticks: 5
+  final-reveal-delay-ticks: 60
+  open-text: '&2ОТКРЫТЬ'
+  open-timeout-seconds: 9
+  case-item-text-offset: 0.50
+cases:
+  setups:
+    - world: ''
+      x: 0
+      y: 0
+      z: 0
+      facing: NORTH
+messages:
+  no-case-set: '&cСначала установи точку кейса через /lc setup'
+  case-set: '&aТочка кейса установлена.'
+  case-set-existing: '&eТочка кейса уже существует и была обновлена.'
+  no-permission: '&cНет прав.'
+  givekey-usage: '&cИспользование: /lc givekey <player> <amount>'
+  removekey-usage: '&cИспользование: /lc removekey <player> <amount>'
+  player-only: '&cКоманда доступна только игроку.'
+  no-keys: '&cУ тебя нет ключей для открытия кейса.'
+  case-locked: '&cКейс сейчас занят.'
+  chest-already-opened: '&eЭтот сундук уже открыт.'
+  rewards-empty: '&cВ конфиге не настроены награды.'
+  reloaded: '&aLexCase перезагружен.'
+  deleted: '&aТекущий setup удалён.'
+  no-case-at-position: '&cНа этой позиции нет setup.'
+  rewards-header: '&aТы получил:'
+  legendary-broadcast: '&6&l[LEGENDARY] &f{player} &7получил {item}'
+rarities:
+  rare:
+    display: '&aRare'
+    color: '&a'
+    chance: 55
+    drops:
+      - material: DIAMOND
+        name: '&aDiamond'
+        amount: 1
+        chance: 50
+        value: 12
+        command: 'give {player} diamond 1'
+      - material: EMERALD
+        name: '&aEmerald'
+        amount: 2
+        chance: 50
+        value: 14
+        command: 'give {player} emerald 2'
+  epic:
+    display: '&bEpic'
+    color: '&b'
+    chance: 30
+    drops:
+      - material: EXPERIENCE_BOTTLE
+        name: '&bXP Bottle'
+        amount: 16
+        chance: 70
+        value: 25
+        command: 'give {player} experience_bottle 16'
+      - material: GOLD_INGOT
+        name: '&bGold Ingot'
+        amount: 8
+        chance: 30
+        value: 28
+        command: 'give {player} gold_ingot 8'
+  mythical:
+    display: '&cMythical'
+    color: '&c'
+    chance: 12
+    drops:
+      - material: ENCHANTED_GOLDEN_APPLE
+        name: '&cEnchanted Apple'
+        amount: 1
+        chance: 60
+        value: 120
+        command: 'give {player} enchanted_golden_apple 1'
+      - material: NETHERITE_SCRAP
+        name: '&cNetherite Scrap'
+        amount: 2
+        chance: 40
+        value: 150
+        command: 'give {player} netherite_scrap 2'
+  legendary:
+    display: '&6&lLegendary'
+    color: '&6&l'
+    chance: 3
+    broadcast-legendary: true
+    drops:
+      - material: NETHER_STAR
+        name: '&6&lNether Star'
+        amount: 1
+        chance: 60
+        value: 260
+        command: 'give {player} nether_star 1'
+      - material: DIAMOND_BLOCK
+        name: '&6&lDiamond Block'
+        amount: 3
+        chance: 40
+        value: 340
+        command: 'give {player} diamond_block 3'

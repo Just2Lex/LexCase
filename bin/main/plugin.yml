@@ -1,0 +1,14 @@
+name: LexCase
+version: ${version}
+main: me.lex.lexcase.LexCasePlugin
+api-version: '1.21'
+author: Lex
+commands:
+  lc:
+    description: Main LexCase command
+    usage: /lc <setup|givekey|removekey|reload|delete>
+permissions:
+  lexcase.admin:
+    default: op
+  lexcase.givekey:
+    default: op
